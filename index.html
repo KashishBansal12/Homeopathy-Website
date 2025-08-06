@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. [Doctor's Name] - Holistic Healing</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a professional but friendly look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Updated to include Lora font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header will be injected here by JavaScript -->
+    <header id="main-header"></header>
+
+    <!-- Main Content Area - All sections -->
+    <main>
+        <!-- Hero Section -->
+        <!-- Adjusted padding-bottom to reduce space after the button -->
+        <section id="home" class="relative bg-white pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24 overflow-hidden text-center">
+            <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-teal-50 opacity-70"></div>
+            <div class="absolute inset-0" style="background-image: url('back.png'); background-size: cover; background-position: center; opacity: 0.1;"></div>
+            <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+                    Holistic Healing with Homeopathy
+                </h1>
+                <p class="text-xl sm:text-2xl text-gray-700 max-w-3xl mx-auto mb-10">
+                    Dr. [Doctor's Name], a specialist in [specialty, e.g., chronic disease management], offers personalized care for your well-being.
+                </p>
+                <a href="#contact" class="btn-primary inline-block text-white font-semibold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105">
+                    Consult Now
+                </a>
+            </div>
+        </section>
+
+        <!-- About The Doctor Section -->
+        <!-- Adjusted padding-top to reduce space before this section -->
+        <section id="about" class="pt-12 pb-16 sm:pt-16 sm:pb-20 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-4xl font-semibold text-gray-800 mb-6">About Dr. [Doctor's Name]</h2>
+                    <!-- Applied about-text-font class -->
+                    <p class="text-gray-600 leading-relaxed mb-4 about-text-font">
+                        Dr. [Doctor's Name] is a passionate and experienced homeopathic practitioner with over [Number] years dedicated to natural and holistic healing. Holding a [Your Degree, e.g., BHMS, MD (Hom.)] from [University/Institute Name], Dr. [Doctor's Name] believes in a patient-centric approach, understanding each individual's unique health journey.</p>
+                    <p class="text-gray-600 leading-relaxed mb-4 about-text-font">
+                        Our philosophy extends beyond treating symptoms; we aim to identify and address the root cause of imbalances, promoting long-term wellness and vitality. Dr. [Doctor's Name] combines traditional homeopathic wisdom with modern insights to provide comprehensive and compassionate care.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed about-text-font">
+                        We are committed to empowering our patients with knowledge, guiding them towards a healthier, more balanced life through safe, gentle, and effective homeopathic remedies.
+                    </p>
+                </div>
+                <div class="flex justify-center order-1 md:order-2">
+                    <img src="dr.jpg" alt="Professional portrait of Dr. [Doctor's Name]" class="rounded-full shadow-2xl w-full max-w-sm lg:max-w-md">
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-semibold text-center text-gray-800 mb-12">Our Holistic Services</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <svg class="w-20 h-20 mx-auto mb-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Personalized Consultations</h3>
+                        <!-- Applied about-text-font class -->
+                        <p class="text-gray-600 leading-relaxed about-text-font">Comprehensive, one-on-one sessions to understand your unique health needs and create a tailored homeopathic treatment plan.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <svg class="w-20 h-20 mx-auto mb-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 8h16M4 16h16"></path></svg>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Chronic Disease Management</h3>
+                        <!-- Applied about-text-font class -->
+                        <p class="text-gray-600 leading-relaxed about-text-font">Long-term support and effective homeopathic solutions for chronic conditions like allergies, arthritis, digestive issues, and more.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <svg class="w-20 h-20 mx-auto mb-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Acute Care & First Aid</h3>
+                        <!-- Applied about-text-font class -->
+                        <p class="text-gray-600 leading-relaxed about-text-font">Prompt and gentle homeopathic remedies for sudden illnesses, minor injuries, colds, flu, and other acute conditions.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <svg class="w-20 h-20 mx-auto mb-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.007 12.007 0 002.944 12c0 2.893 1.148 5.618 3.04 7.618A12.007 12.007 0 0012 21.056c2.893 0 5.618-1.148 7.618-3.04A12.007 12.007 0 0021.056 12a11.955 11.955 0 01-3.04-8.618z"></path></svg>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Preventative Wellness</h3>
+                        <!-- Applied about-text-font class -->
+                        <p class="text-gray-600 leading-relaxed about-text-font">Strategies and remedies to strengthen your body's natural defenses and maintain optimal health proactively.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <svg class="w-20 h-20 mx-auto mb-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18 18.72a4.5 4.5 0 002.25 1.276A9.754 9.754 0 0121.75 12V7.5m-8.69-5.69a2.25 2.25 0 013.182 0l2.909 2.909m-1.5 1.5A2.25 2.25 0 0011.25 18.72H3.75a2.25 2.25 0 01-2.25-2.25V10.5m1.5-1.5L21 3m-3 0l3 3m-3 0l-7.5 7.5M18 18.72a4.5 4.5 0 002.25 1.276A9.754 9.754 0 0121.75 12V7.5m-8.69-5.69a2.25 2.25 0 013.182 0l2.909 2.909m-1.5 1.5A2.25 2.25 0 0011.25 18.72H3.75a2.25 2.25 0 01-2.25-2.25V10.5m1.5-1.5L21 3m-3 0l3 3m-3 0l-7.5 7.5"></path></svg>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Women's Health</h3>
+                        <!-- Applied about-text-font class -->
+                        <p class="text-gray-600 leading-relaxed about-text-font">Specialized homeopathic care addressing women's unique health concerns through all stages of life, from puberty to menopause.</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl shadow-lg p-8 text-center transition-transform transform hover:scale-105 hover:shadow-2xl duration-300">
+                        <svg class="w-20 h-20 mx-auto mb-6 text-accent-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.042A8.967 8.967 0 006 3.75c-1.079 0-2.157.17-3.204.51C1.97 4.6 2 4.69 2 4.887V18.75a.896.896 0 00.804.887 8.967 8.967 0 017.129 0c.88-.376 1.748-.81 2.607-1.311m0 0l.5-.326V14.25m0 0a8.967 8.967 0 006-3.75c1.079 0 2.157-.17 3.204-.51.1-.03.17-.119.196-.217V5.042a.896.896 0 00-.804-.887 8.967 8.967 0 00-7.129 0m0 0l-.5.326V7.5"></path></svg>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-800">Child & Infant Care</h3>
+                        <!-- Applied about-text-font class -->
+                        <p class="text-gray-600 leading-relaxed about-text-font">Gentle and effective homeopathic treatments for common childhood ailments, supporting healthy growth and development.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="py-16 sm:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-semibold text-center text-gray-800 mb-12">Meet Our Dedicated Team</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member 1: Dr. [Doctor's Name] (Main Doctor) -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <img src="https://placehold.co/200x200/E0F2F7/0F766E?text=Dr.+[Doctor's+Name]" alt="Dr. [Doctor's Name]" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-gray-800">Dr. [Doctor's Name]</h3>
+                        <p class="text-accent-600 mb-2 about-text-font">Lead Homeopathic Physician</p>
+                        <!-- Applied about-text-font class -->
+                        <p class="text-gray-600 text-sm about-text-font">Founder of Holistic Healing, Dr. [Doctor's Name] brings extensive experience and a compassionate approach to every patient.</p>
+                    </div>
+                    <!-- Team Member 2: Assistant/Support Staff -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <img src="https://placehold.co/200x200/E0F2F7/0F766E?text=Jane+Doe" alt="Jane Doe" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-gray-800">Jane Doe</h3>
+                        <p class="text-gray-500 mb-2 about-text-font">Clinic Manager</p>
+                        <!-- Applied about-text-font class -->
+                        <p class="text-gray-600 text-sm about-text-font">Jane ensures the smooth operation of our clinic and provides excellent support to our patients.</p>
+                    </div>
+                    <!-- Team Member 3: Another Practitioner/Therapist (Optional) -->
+                    <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+                        <img src="https://placehold.co/200x200/E0F2F7/0F766E?text=John+Smith" alt="John Smith" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+                        <h3 class="text-xl font-bold text-gray-800">John Smith</h3>
+                        <p class="text-gray-500 mb-2 about-text-font">Wellness Coordinator</p>
+                        <!-- Applied about-text-font class -->
+                        <p class="text-gray-600 text-sm about-text-font">John assists patients with their treatment plans and provides guidance on holistic lifestyle choices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Customer Reviews / Blog Section (Insights) -->
+        <section id="insights" class="py-16 sm:py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-semibold text-center text-gray-800 mb-12">Patient Stories & Blog</h2>
+                <div id="blog-posts-container" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Blog posts will be dynamically injected here by script.js -->
+                    <p class="text-center text-gray-500 col-span-full about-text-font" id="loading-message">Loading insights...</p>
+                </div>
+                <div class="text-center mt-12">
+                    <a href="#" class="text-accent-600 hover:text-accent-800 font-semibold transition-colors duration-200 text-lg about-text-font">
+                        View All Stories & Blog Posts &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 sm:py-24 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-4xl font-semibold text-center text-gray-800 mb-12">Get in Touch</h2>
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Form -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label for="contact-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                                <input type="text" id="contact-name" name="name" required
+                                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" id="contact-email" name="email" required
+                                       class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm">
+                            </div>
+                            <div>
+                                <label for="contact-message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                                <textarea id="contact-message" name="message" rows="5" required
+                                          class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn-primary w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 transform hover:scale-105">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info & Map (Placeholder) -->
+                    <div class="bg-white rounded-xl shadow-lg p-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Clinic</h3>
+                        <!-- Applied about-text-font class -->
+                        <p class="text-gray-600 mb-4 about-text-font">
+                            <span class="font-semibold block">Address:</span> 123 Health Ave, Wellness City, State, USA 12345
+                        </p>
+                        <p class="text-gray-600 mb-4 about-text-font">
+                            <span class="font-semibold block">Phone:</span> (123) 456-7890
+                        </p>
+                        <p class="text-gray-600 mb-6 about-text-font">
+                            <span class="font-semibold block">Email:</span> info@holistic-healing.com
+                        </p>
+                        <!-- Placeholder for a map or clinic image -->
+                        <div class="w-full h-64 bg-gray-200 rounded-md flex items-center justify-center text-gray-500">
+                            [Map Placeholder or Clinic Photo]
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer will be injected here by JavaScript -->
+    <footer id="main-footer"></footer>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

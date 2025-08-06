@@ -1,0 +1,90 @@
+/* Custom CSS for Holistic Healing Website */
+
+/* Define CSS Variables for consistent colors */
+:root {
+    --color-primary-dark: #1E3A8A; /* Deep Blue */
+    --color-primary-hover: #1E40AF; /* Slightly darker blue */
+    --color-accent: #06B6D4; /* Muted Teal/Cyan */
+    --color-accent-hover: #0891B2; /* Darker muted teal */
+    --color-background-light: #F8FAFC; /* Very light gray */
+    --color-text-dark: #1F2937; /* Gray-900 */
+    --color-text-medium: #4B5563; /* Gray-700 */
+    --color-text-light: #6B7280; /* Gray-500 */
+}
+
+/* Apply colors to Tailwind utility classes where needed */
+.btn-primary {
+    background-color: var(--color-primary-dark);
+}
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+}
+.text-accent-600 {
+    color: var(--color-accent);
+}
+.hover\:text-accent-800:hover {
+    color: var(--color-accent-hover);
+}
+.header-link.active {
+    font-weight: 600;
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+/* General Body Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-background-light);
+    color: var(--color-text-medium);
+}
+/* Font for About section text */
+.about-text-font {
+    font-family: 'Lora', serif;
+}
+
+/* Headings Font */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--color-text-dark);
+}
+
+/* Ensure smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fixed Header Styling */
+#main-header {
+    position: sticky; /* Or 'fixed' if you want it to always stay on top */
+    top: 0;
+    width: 100%;
+    z-index: 50;
+    background-color: white; /* Ensure header background is white */
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* Subtle shadow */
+}
+
+/* Mobile Menu Specific Styling (for toggle effect) */
+#mobile-menu {
+    transition: max-height 0.3s ease-out;
+    overflow: hidden;
+    max-height: 0; /* Hidden by default */
+}
+#mobile-menu.open {
+    max-height: 200px; /* Adjust as needed to fit content */
+}
+
+/* Input focus styles */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.2); /* Accent color with transparency */
+}
+
+/* Optional: Subtle gradient on services cards for extra elegance */
+.service-card {
+    background: linear-gradient(145deg, #ffffff, #f0f9ff); /* White to very light blue */
+    border: 1px solid #e0f2fe; /* Light border */
+}
+.service-card:hover {
+    background: linear-gradient(145deg, #f0f9ff, #ffffff);
+}
