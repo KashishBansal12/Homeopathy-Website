@@ -13,8 +13,6 @@ document.addEventListener('DOMContentLoaded', function() {
         ];
         
         const navLinks = links.map(link => {
-            // Check if the current section is active based on scroll position (handled by scroll observer)
-            // For initial load, we don't mark active here, it's done by the Intersection Observer
             return `<a href="${link.href}" class="header-link text-gray-600 hover:text-accent-600 transition-colors duration-200 px-3 py-2 rounded-md font-medium">${link.name}</a>`;
         }).join('');
 
@@ -39,14 +37,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         <!-- Desktop Navigation -->
                         <nav class="hidden md:flex items-center space-x-4">
                             ${navLinks}
-                           <a href="appointment.html" class="btn-primary inline-flex items-center justify-center text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl ml-4">
+                            <a href="appointment.html" class="btn-primary inline-flex items-center justify-center text-white font-semibold py-2 px-4 rounded-full shadow-md mr-4">
+
                                 Book Appointment
                             </a>
                         </nav>
                         
                         <!-- Mobile Navigation (Hamburger Icon) -->
                         <div class="md:hidden flex items-center">
-                           <a href="appointment.html" class="btn-primary inline-flex items-center justify-center text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl ml-4">
+                            <a href="appointment.html" class="btn-primary inline-flex items-center justify-center text-white font-semibold py-2 px-4 rounded-full shadow-md mr-4">
+
                                 Book
                             </a>
                             <button id="mobile-menu-toggle" class="text-gray-500 hover:text-gray-900 focus:outline-none">
@@ -54,18 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                                 </svg>
                             </button>
-                        </div>
-                    </div>
-                    
-                    <!-- Mobile Menu (To be toggled by JS) -->
-                    <div id="mobile-menu" class="hidden md:hidden">
-                        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-accent-600 hover:bg-gray-50">Home</a>
-                            <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-accent-600 hover:bg-gray-50">About Us</a>
-                            <a href="#services" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-accent-600 hover:bg-gray-50">Services</a>
-                            <a href="#team" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-accent-600 hover:bg-gray-50">Team</a>
-                            <a href="#insights" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-accent-600 hover:bg-gray-50">Insights</a>
-                            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-accent-600 hover:bg-gray-50">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -127,59 +115,58 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('main-footer').innerHTML = getFooterHTML();
     
     // --- Mobile Menu Toggle ---
-    // --- Mobile Menu Toggle ---
-const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
 
-// Create and inject the overlay
-const overlay = document.createElement('div');
-overlay.id = 'mobile-nav-overlay';
-overlay.className = 'mobile-nav-overlay';
-document.body.appendChild(overlay);
+    // Create and inject the overlay
+    const overlay = document.createElement('div');
+    overlay.id = 'mobile-nav-overlay';
+    overlay.className = 'mobile-nav-overlay';
+    document.body.appendChild(overlay);
 
-// Get the nav element inside the drawer
-const mobileNav = mobileNavDrawer.querySelector('nav');
+    // Get the nav element inside the drawer
+    const mobileNav = mobileNavDrawer.querySelector('nav');
 
-// Inject mobile links into the drawer
-const linksData = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Team', href: '#team' },
-    { name: 'Insights', href: '#insights' },
-    { name: 'Contact', href: '#contact' },
-];
-mobileNav.innerHTML = linksData.map(link => `
-    <a href="${link.href}">${link.name}</a>
-`).join('');
+    // Inject mobile links into the drawer
+    const linksData = [
+        { name: 'Home', href: '#home' },
+        { name: 'About Us', href: '#about' },
+        { name: 'Services', href: '#services' },
+        { name: 'Team', href: '#team' },
+        { name: 'Insights', href: '#insights' },
+        { name: 'Contact', href: '#contact' },
+    ];
+    mobileNav.innerHTML = linksData.map(link => `
+        <a href="${link.href}">${link.name}</a>
+    `).join('');
 
-function closeMobileMenu() {
-    mobileNavDrawer.classList.remove('mobile-nav-open');
-    overlay.classList.remove('mobile-nav-overlay-visible');
-    document.body.style.overflow = ''; // Restore body scrolling
-}
-
-function openMobileMenu() {
-    mobileNavDrawer.classList.add('mobile-nav-open');
-    overlay.classList.add('mobile-nav-overlay-visible');
-    document.body.style.overflow = 'hidden'; // Disable body scrolling
-}
-
-mobileMenuToggle.addEventListener('click', () => {
-    if (mobileNavDrawer.classList.contains('mobile-nav-open')) {
-        closeMobileMenu();
-    } else {
-        openMobileMenu();
+    function closeMobileMenu() {
+        mobileNavDrawer.classList.remove('mobile-nav-open');
+        overlay.classList.remove('mobile-nav-overlay-visible');
+        document.body.style.overflow = ''; // Restore body scrolling
     }
-});
 
-// Close menu when a link inside is clicked
-mobileNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', closeMobileMenu);
-});
+    function openMobileMenu() {
+        mobileNavDrawer.classList.add('mobile-nav-open');
+        overlay.classList.add('mobile-nav-overlay-visible');
+        document.body.style.overflow = 'hidden'; // Disable body scrolling
+    }
 
-// Close menu when overlay is clicked
-overlay.addEventListener('click', closeMobileMenu);
+    mobileMenuToggle.addEventListener('click', () => {
+        if (mobileNavDrawer.classList.contains('mobile-nav-open')) {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        }
+    });
+
+    // Close menu when a link inside is clicked
+    mobileNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close menu when overlay is clicked
+    overlay.addEventListener('click', closeMobileMenu);
 
     // --- Smooth Scrolling for Navigation Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -191,10 +178,7 @@ overlay.addEventListener('click', closeMobileMenu);
 
             if (targetElement) {
                 // Close mobile menu if open
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('open');
-                }
+                closeMobileMenu();
                 
                 // Scroll to the target element with offset for fixed header
                 const headerOffset = document.getElementById('main-header').offsetHeight;
