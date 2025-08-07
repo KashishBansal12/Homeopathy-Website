@@ -39,14 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
                         <!-- Desktop Navigation -->
                         <nav class="hidden md:flex items-center space-x-4">
                             ${navLinks}
-                            <a href="login.html" class="btn-primary inline-flex items-center justify-center text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl ml-4">
+                           <a href="appointment.html" class="btn-primary inline-flex items-center justify-center text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl ml-4">
                                 Book Appointment
                             </a>
                         </nav>
                         
                         <!-- Mobile Navigation (Hamburger Icon) -->
                         <div class="md:hidden flex items-center">
-                            <a href="login.html" class="btn-primary inline-flex items-center justify-center text-white font-semibold py-2 px-4 rounded-full shadow-md mr-4">
+                           <a href="appointment.html" class="btn-primary inline-flex items-center justify-center text-white font-semibold py-2 px-6 rounded-full shadow-lg transition-all duration-300 hover:shadow-xl ml-4">
                                 Book
                             </a>
                             <button id="mobile-menu-toggle" class="text-gray-500 hover:text-gray-900 focus:outline-none">
