@@ -55,7 +55,7 @@ html {
 
 /* Fixed Header Styling */
 #main-header {
-    position: sticky; /* Or 'fixed' if you want it to always stay on top */
+    position: sticky; /* to always stay on top */
     top: 0;
     width: 100%;
     z-index: 50;
@@ -87,4 +87,64 @@ input:focus, textarea:focus {
 }
 .service-card:hover {
     background: linear-gradient(145deg, #f0f9ff, #ffffff);
+}
+/* --- Mobile Navigation Drawer Styling --- */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 60;
+    width: 250px; /* Adjust width as needed */
+    height: 100vh;
+    background-color: white;
+    transform: translateX(-100%); /* Hide off-screen by default */
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Class to show the mobile drawer */
+.mobile-nav-open {
+    transform: translateX(0); /* Slide into view */
+}
+
+/* Overlay for the rest of the screen */
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 55; /* Higher than the main content but lower than the nav drawer */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Class to show the overlay */
+.mobile-nav-overlay-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Mobile Nav Links Styling */
+.mobile-nav a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-text-medium);
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease;
+}
+.mobile-nav a:hover {
+    background-color: #f3f4f6;
+    color: var(--color-primary-dark);
+}
+.mobile-nav a.active {
+    background-color: #e0f2fe; /* A light, accent-themed background */
+    color: var(--color-accent);
 }

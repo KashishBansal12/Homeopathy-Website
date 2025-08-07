@@ -6,10 +6,10 @@
     <title>Dr. [Doctor's Name] - Holistic Healing</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for a professional but friendly look -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Updated to include Lora font -->
+    <!-- include Lora font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -17,11 +17,14 @@
 <body>
     <!-- Header will be injected here by JavaScript -->
     <header id="main-header"></header>
+    <div id="mobile-nav-drawer" class="mobile-nav">
+    <nav class="flex-1 overflow-y-auto">
+        </nav>
+</div>
 
     <!-- Main Content Area - All sections -->
     <main>
         <!-- Hero Section -->
-        <!-- Adjusted padding-bottom to reduce space after the button -->
         <section id="home" class="relative bg-white pt-24 pb-16 sm:pt-28 sm:pb-20 lg:pt-32 lg:pb-24 overflow-hidden text-center">
             <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-teal-50 opacity-70"></div>
             <div class="absolute inset-0" style="background-image: url('back.png'); background-size: cover; background-position: center; opacity: 0.1;"></div>
@@ -39,12 +42,11 @@
         </section>
 
         <!-- About The Doctor Section -->
-        <!-- Adjusted padding-top to reduce space before this section -->
         <section id="about" class="pt-12 pb-16 sm:pt-16 sm:pb-20 bg-gray-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-12 items-center">
                 <div class="order-2 md:order-1">
                     <h2 class="text-4xl font-semibold text-gray-800 mb-6">About Dr. [Doctor's Name]</h2>
-                    <!-- Applied about-text-font class -->
+                   
                     <p class="text-gray-600 leading-relaxed mb-4 about-text-font">
                         Dr. [Doctor's Name] is a passionate and experienced homeopathic practitioner with over [Number] years dedicated to natural and holistic healing. Holding a [Your Degree, e.g., BHMS, MD (Hom.)] from [University/Institute Name], Dr. [Doctor's Name] believes in a patient-centric approach, understanding each individual's unique health journey.</p>
                     <p class="text-gray-600 leading-relaxed mb-4 about-text-font">

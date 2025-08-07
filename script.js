@@ -127,15 +127,59 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('main-footer').innerHTML = getFooterHTML();
     
     // --- Mobile Menu Toggle ---
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const mobileMenu = document.getElementById('mobile-menu');
+    // --- Mobile Menu Toggle ---
+const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+const mobileNavDrawer = document.getElementById('mobile-nav-drawer');
 
-    if (mobileMenuToggle && mobileMenu) {
-        mobileMenuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('open'); // For CSS transition
-        });
+// Create and inject the overlay
+const overlay = document.createElement('div');
+overlay.id = 'mobile-nav-overlay';
+overlay.className = 'mobile-nav-overlay';
+document.body.appendChild(overlay);
+
+// Get the nav element inside the drawer
+const mobileNav = mobileNavDrawer.querySelector('nav');
+
+// Inject mobile links into the drawer
+const linksData = [
+    { name: 'Home', href: '#home' },
+    { name: 'About Us', href: '#about' },
+    { name: 'Services', href: '#services' },
+    { name: 'Team', href: '#team' },
+    { name: 'Insights', href: '#insights' },
+    { name: 'Contact', href: '#contact' },
+];
+mobileNav.innerHTML = linksData.map(link => `
+    <a href="${link.href}">${link.name}</a>
+`).join('');
+
+function closeMobileMenu() {
+    mobileNavDrawer.classList.remove('mobile-nav-open');
+    overlay.classList.remove('mobile-nav-overlay-visible');
+    document.body.style.overflow = ''; // Restore body scrolling
+}
+
+function openMobileMenu() {
+    mobileNavDrawer.classList.add('mobile-nav-open');
+    overlay.classList.add('mobile-nav-overlay-visible');
+    document.body.style.overflow = 'hidden'; // Disable body scrolling
+}
+
+mobileMenuToggle.addEventListener('click', () => {
+    if (mobileNavDrawer.classList.contains('mobile-nav-open')) {
+        closeMobileMenu();
+    } else {
+        openMobileMenu();
     }
+});
+
+// Close menu when a link inside is clicked
+mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMobileMenu);
+});
+
+// Close menu when overlay is clicked
+overlay.addEventListener('click', closeMobileMenu);
 
     // --- Smooth Scrolling for Navigation Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
